@@ -13,7 +13,7 @@ count = 0
 found = False
 n = NlgParser()
 
-while (count < 200):
+while (True):
 	#MAIN LOOP.
 	#check any new messages that were sent
 	responses = getMessages(cs)
@@ -22,8 +22,9 @@ while (count < 200):
 			print "Message received: " + r
 			n.parseCommand(r)
 			
-	send("findObj,apple,PD\n", cs)
-	
+	# send("findObj,poison,PD\n", cs)
+	# time.sleep(0.5)
+	# send("findObj,apple,PD\n", cs)
 	count += 1
 	time.sleep(1)
 	
